@@ -6,7 +6,7 @@ defmodule ChatappWeb.Router do
     plug :fetch_session
     plug :fetch_live_flash
     plug :put_root_layout, html: {ChatappWeb.Layouts, :root}
-    plug :protect_from_forgery
+    # plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
 
@@ -18,7 +18,6 @@ defmodule ChatappWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    post "/send", PageController, :send
   end
 
   # Other scopes may use custom stacks.
